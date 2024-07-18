@@ -2,10 +2,6 @@ import math
 import tkinter as tk
 import collections
 
-
-import collections
-
-
 visited = []
 queue = []  
 
@@ -28,10 +24,7 @@ def bfs(start_node, graph):
 
     return path
 
-
 def main():
-
-
     test = {
         #traps removed ([2,2], [4,2], [7,2], [6,7], [6,4], [9,3]
         #walls removed ([4,6], [4,4], [5,4], [5,3], [7,6], [7,4], [8,6], [8,5], [9,2])
@@ -97,11 +90,9 @@ def main():
         '10,7': []
     }
 
-
     print("The resulting path with BFS to the treasures are: ")
 
     bfs('1,1', test, visited)
-
 
 # Define drawing functions for hexagons, legends, traps, and rewards
 def draw_hexagon(canvas, x, y, coord):
@@ -169,7 +160,6 @@ def printMap():
             draw_hexagon(canvas, x, y, coord)
 
 printMap()
-
 
 # Define the graph structure
 graph = {
@@ -280,7 +270,6 @@ def animate_path(canvas, path):
     # Start animation loop
     for step, node in enumerate(path):
         animate_step(step, node)
-
     
 def highlight_hexagon(canvas, x, y, node, path, energy, step):
     size = 30
@@ -369,4 +358,3 @@ window.mainloop()
 # just to make sure the main func is ran
 if __name__ == "__main__":
     main()
-
